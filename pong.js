@@ -74,7 +74,7 @@ function moveAll(){
 
     if(ballX < 0){
         if(ballY > paddle1Y && ballY < paddle1Y+paddleHeight){
-            ballSpeedX = -ballSpeedX
+            ballSpeedX = --ballSpeedX
             var deltaY = ballY - (paddle1Y+paddleHeight/2)
             ballSpeedY = deltaY * 0.35
         } else{
@@ -84,7 +84,7 @@ function moveAll(){
     }
     if(ballX > canvas.clientWidth){
         if(ballY > paddle2Y && ballY < paddle2Y+paddleHeight){
-            ballSpeedX -= ballSpeedX
+            ballSpeedX = --ballSpeedX
             var deltaY = ballY - (paddle2Y+paddleHeight/2)
             ballSpeedY = deltaY * 0.35
         } else{
@@ -94,10 +94,10 @@ function moveAll(){
     }
 
     if(ballY < 0){
-        ballSpeedY = -ballSpeedY
+        ballSpeedY = --ballSpeedY
     }
     if(ballY > canvas.clientHeight){
-        ballSpeedY = -ballSpeedY
+        ballSpeedY = --ballSpeedY
     }
 }
 
